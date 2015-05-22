@@ -1,6 +1,6 @@
 iron-router-helpers
 ====================
-a package of iron router helpers
+a package of iron router template helpers
 
 isRoute X
 ==========
@@ -28,3 +28,11 @@ evaluates position Y for X
   {{/if}}
 ````
 
+getRouteQuery
+=============
+returns Iron.Location.get().query
+
+getRouteQueryObject x
+====================
+
+returns Iron.Location.get().queryObject[x]

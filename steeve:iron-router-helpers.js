@@ -25,4 +25,12 @@ if (Meteor.isClient) {
       return true;
     }
   });
+
+  Template.registerHelper('getRouteQuery', function(){
+    return Iron.Location.get().query
+  });
+
+  Template.registerHelper('getRouteQueryObject', function(x){
+    return Iron.Location.get().queryObject[x];
+  });
 }
