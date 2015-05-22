@@ -11,7 +11,7 @@ Package.onUse(function(api) {
   
   api.use([
     'templating',
-    'iron:router'
+    'iron:router@1.0.1'
     ], 'client');
     
   api.addFiles('steeve:iron-router-helpers.js', 'client');
