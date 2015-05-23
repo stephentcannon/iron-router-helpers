@@ -28,6 +28,15 @@ if (Meteor.isClient) {
     }
   });
 
+  Template.registerHelper('isInRoute', function(x){
+
+  });
+
+  Template.registerHelper('getPathValByPos', function(x){
+    var route = Iron.Location.get().pathname.split("/");
+    return route[x];
+  });
+
   Template.registerHelper('getRouteQuery', function(){
     return Iron.Location.get().query
   });
