@@ -36,3 +36,9 @@ getRouteQueryObject x
 ====================
 
 returns Iron.Location.get().queryObject[x]
+
+dev test locally
+=================
+mrt link-package /Users/stephencannon/projects/private_packages/steeve:iron-router-helpers
+
+meteor add steeve:iron-router-helpers

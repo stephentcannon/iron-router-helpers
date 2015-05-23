@@ -1,7 +1,7 @@
 Package.describe({
   name: 'steeve:iron-router-helpers',
   summary: 'a package of iron router template helpers',
-  version: '0.0.2',
+  version: '0.0.3',
   git: 'https://github.com/stephentcannon/iron-router-helpers.git'
 });
 
