@@ -1,22 +1,21 @@
 if (Meteor.isClient) {
   Template.registerHelper('isRoute', function(x){
     var route = Iron.Location.get().pathname.split("/");
-    //console.log(route[2]);
-    //console.log(this);
-    //console.log(x);
+    // console.log('x: ' + x);
+    // console.log('route[2]: ' + route[2]);
+    // console.log('route[1]: ' + route[1]);
+    var retVal = false;
     if(route[2]){
       if(route[2] == x){
-        return true;
-      } else {
-        return false;
+        retVal = true;
       }
     } else if (route[1]){
       if(route[1] == x){
         return true;
-      } else {
-        return false;
       }
     }
+    // console.log('retVal: ' + retVal);
+    return retVal;
   });
   
   Template.registerHelper('isRouteByPos', function(x, y){
@@ -31,6 +30,10 @@ if (Meteor.isClient) {
 
   Template.registerHelper('getRouteQuery', function(){
     return Iron.Location.get().query
+  });
+
+  Template.registerHelper('getRouteSearch', function(){
+    return Iron.Location.get().search
   });
 
   Template.registerHelper('getRouteQueryObject', function(x){
